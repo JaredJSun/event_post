@@ -9,7 +9,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // 连接到MongoDB数据库
-mongoose.connect('mongodb://localhost/events', {
+const uri = 'mongodb://localhost/event-app';
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
