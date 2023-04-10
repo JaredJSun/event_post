@@ -1,1 +1,1 @@
-# event_post
+This is the repo for the event posting feature
