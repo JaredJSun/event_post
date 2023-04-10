@@ -6,7 +6,7 @@ const EventList = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await axios.get('http://localhost:5000/api/events');
+      const response = await axios.get('http://localhost:3001/api/events');
       setEvents(response.data);
     };
     fetchEvents();
