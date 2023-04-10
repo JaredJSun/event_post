@@ -14,15 +14,18 @@ const EventList = () => {
   }, []);
 
   return (
-    <ul>
-      {events.map((event) => (
-        <li key={event._id}>
-          <h3>{event.name}</h3>
-          <p>Location: {event.location}</p>
-          <p>Description: {event.description}</p>
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2 style={{ textAlign: 'center' }}>Event List</h2>
+      <div className="event-list">
+        {events.map((event) => (
+          <div className="event-item" key={event._id}>
+            <h3>{event.name}</h3>
+            <p>Location: {event.location}</p>
+            <p>Description: {event.description}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
