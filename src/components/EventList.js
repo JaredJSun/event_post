@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import React from 'react';
-import './styles/EventList.css'; // 导入CSS文件
+import '../styles/EventList.css'; // 导入CSS文件
 
 const EventList = () => {
   const [events, setEvents] = useState([]);

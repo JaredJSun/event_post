@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import React, { useState } from 'react';
-import './styles/EventForm.css'; // 导入CSS文件
+import '../styles/EventForm.css'; // 导入CSS文件
 
 const EventForm = () => {
   const [name, setName] = useState('');
