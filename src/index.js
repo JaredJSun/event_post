@@ -4,6 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Empty callback function for Google Maps API script
+window.initGoogleMaps = () => {};
+
+// // Dynamically load the Google Maps API script
+// const googleMapsScript = document.createElement("script");
+// googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`;
+// googleMapsScript.async = true;
+// googleMapsScript.defer = true;
+// document.head.appendChild(googleMapsScript);
+
+// Dynamically load the Google Maps API script
+const googleMapsScript = document.createElement("script");
+googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places&callback=initGoogleMaps`;
+googleMapsScript.async = true;
+googleMapsScript.defer = true;
+document.head.appendChild(googleMapsScript);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
