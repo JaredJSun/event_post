@@ -21,8 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Event App</h1>
+      <h1>Create and see local events</h1>
       <EventForm onEventCreated={addEvent} />
+      <div className="divider"></div>
       <EventList events={events} />
     </div>
   );
